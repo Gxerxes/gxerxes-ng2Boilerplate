@@ -57,6 +57,9 @@ export class AppComponent {
     private onClick(event){
         console.log(event);
         console.log(this.appStore);
+        console.log(_.random(1,10));
+        bootbox.confirm("Are you sure?", function(result) {
+        });
     }
 
     public hoveringOver(value:number):void {

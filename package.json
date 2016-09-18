@@ -22,6 +22,7 @@
     "@angular/router": "3.0.0",
     "angular2-redux-util": "^0.8.64",
     "angular2-uuid": "^1.1.0",
+    "bootbox": "^4.4.0",
     "core-js": "^2.4.1",
     "jquery": "^3.1.0",
     "lodash": "^4.15.0",
