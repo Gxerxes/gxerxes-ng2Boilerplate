@@ -47,7 +47,7 @@ import {routing} from "./App.routes";
 import {LogoutDeactivate} from "./comps/logout/LogoutDeactivate";
 import {PositionService} from "./comps/tooltip/position.service";
 import {BrowserModule} from "@angular/platform-browser";
-import {ModalComponent} from "ng2-bs3-modal/components/modal";
+// import {ModalComponent} from "ng2-bs3-modal/components/modal";
 import {Welcome} from "./comps/welcome/Welcome";
 import {Digg} from "./comps/digg/Digg";
 import {Todos} from "./comps/app1/todos/Todos";
@@ -100,7 +100,7 @@ import {
 import {InjectTemplateChild} from "./comps/app2/notes/InjectTemplateChild";
 import {DisplayError} from "./comps/displayerror/DisplayError";
 import {CounterInputComponent} from "./comps/counterinputcomponent/CounterInputComponent";
-import {MODAL_DIRECTIVES} from "ng2-bs3-modal/ng2-bs3-modal";
+// import {MODAL_DIRECTIVES} from "ng2-bs3-modal/ng2-bs3-modal";
 import {MyIp} from "./comps/myip/Myip";
 import {TrimmedInput} from "./comps/trimmedinput/TrimmedInput";
 import {Minitab} from "./comps/minitabs/Minitab";
@@ -182,9 +182,6 @@ var providing = [{
     provide: PositionService,
     useClass: PositionService
 }, {
-    provide: ModalComponent,
-    useClass: ModalComponent
-}, {
     provide: CommBroker,
     useClass: CommBroker
 }, {
@@ -195,6 +192,9 @@ var providing = [{
 }];
 
 
+// }, {
+//     provide: ModalComponent,
+//     useClass: ModalComponent
 
 /**
  Main application bootstrap
@@ -272,9 +272,11 @@ if (!Lib.DevMode())
             }
         }],
     entryComponents: [DynaFactoryResHelloWorld],
-    declarations: [Main, Welcome, Digg, Todos, Settings, LoginPanel, Help, App1, App2, App3, ForgotPass, AppManager, EntryPanel, Logout, MakeDraggable, MakeDroppable, Sliderpanel, Todo1, Todo2, TodoList, CharCount, SortBy, OrderBy, Filemenu, FilemenuItem, Logo, Footer, Menu, MenuItem, Sliderpanel, Digg, Contributors, Todos, Todo1, Todo2, TodoList, TodoItem, Logout, Settings, Tabs, Tab, Help, MyChart, AlertComponent, RatingComponent, Tab, Tabs, Contributors, Ng2Highcharts, TodoItem, Nodelogger, DividerPanel, Menu, MenuItem, Sliderpanel, Digg, Properties, Weather, Contact, ModalDialog, Notes, Notes1, Notes2, Notes3, Notes4, Notes5, Contact, ModalDialog, CardComponent, InjectTemplateChild, ModalDialog, DisplayError, CounterInputComponent, TrimmedInput, MyIp, ModalDialog, ModalDialog, MODAL_DIRECTIVES, Minitab, Minitabs, StarWarsSearch, WikiSearch, InfinityScroll, Clock, MultiSlotTransclusion, EmbedView, CompElemBuilder, CreateEmbedDiffer, ToggleButtonApp, StreamButton, ngBookRepeatSample, CountDown, InjectTemplateParent, TooltipDirective, OptionListComponent, NotesDetails, NotesDetailsItems, IncrementingDisplay, ToggleBut, ToggleButton, Notes1Props, SortableHeader, Starwars, ShoppingComponent, AdminComponent, FilmsComponent, UsersView, UserView, Ng2Highcharts, Ng2Highstocks, Ng2Highmaps, FilmSelectionView, FilmView, PartsView, CartView, AddPartsView, SimpleList, Accordion, AccordionGroup, ButtonCheckbox, ButtonRadio, ngBookRepeat, HeightDirective, DynaFactoryRes, PureDialog, PureDialogDirective, DynaFactoryResHelloWorld, AnimateCards, AnimateBox],
+    declarations: [Main, Welcome, Digg, Todos, Settings, LoginPanel, Help, App1, App2, App3, ForgotPass, AppManager, EntryPanel, Logout, MakeDraggable, MakeDroppable, Sliderpanel, Todo1, Todo2, TodoList, CharCount, SortBy, OrderBy, Filemenu, FilemenuItem, Logo, Footer, Menu, MenuItem, Sliderpanel, Digg, Contributors, Todos, Todo1, Todo2, TodoList, TodoItem, Logout, Settings, Tabs, Tab, Help, MyChart, AlertComponent, RatingComponent, Tab, Tabs, Contributors, Ng2Highcharts, TodoItem, Nodelogger, DividerPanel, Menu, MenuItem, Sliderpanel, Digg, Properties, Weather, Contact, ModalDialog, Notes, Notes1, Notes2, Notes3, Notes4, Notes5, Contact, ModalDialog, CardComponent, InjectTemplateChild, ModalDialog, DisplayError, CounterInputComponent, TrimmedInput, MyIp, ModalDialog, ModalDialog, Minitab, Minitabs, StarWarsSearch, WikiSearch, InfinityScroll, Clock, MultiSlotTransclusion, EmbedView, CompElemBuilder, CreateEmbedDiffer, ToggleButtonApp, StreamButton, ngBookRepeatSample, CountDown, InjectTemplateParent, TooltipDirective, OptionListComponent, NotesDetails, NotesDetailsItems, IncrementingDisplay, ToggleBut, ToggleButton, Notes1Props, SortableHeader, Starwars, ShoppingComponent, AdminComponent, FilmsComponent, UsersView, UserView, Ng2Highcharts, Ng2Highstocks, Ng2Highmaps, FilmSelectionView, FilmView, PartsView, CartView, AddPartsView, SimpleList, Accordion, AccordionGroup, ButtonCheckbox, ButtonRadio, ngBookRepeat, HeightDirective, DynaFactoryRes, PureDialog, PureDialogDirective, DynaFactoryResHelloWorld, AnimateCards, AnimateBox],
     bootstrap: [Main],
 })
+
+//MODAL_DIRECTIVES
 
 export class App {
 }

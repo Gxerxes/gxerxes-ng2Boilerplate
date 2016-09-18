@@ -9,6 +9,7 @@
 ///<reference path="../typings/browser/ambient/redux/redux.d.ts" />
 ///<reference path="../typings/browser/ambient/reselect/reselect.d.ts" />
 ///<reference path="../typings/jquery/jquery.d.ts" />
+///<reference path="../typings/lodash/lodash.d.ts" />
 ///<reference path="../typings/bootbox/bootbox.d.ts" />
 
 /** not used **/

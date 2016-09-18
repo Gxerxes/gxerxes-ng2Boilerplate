@@ -27,6 +27,7 @@ import "rxjs/add/operator/mergeMap";
 import "rxjs/add/operator/merge";
 import "rxjs/add/operator/do";
 import * as platform from "platform";
+import * as bootbox from 'bootbox';
 
 
 @Component({
