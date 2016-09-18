@@ -8,10 +8,6 @@ import "zone.js/dist/long-stack-trace-zone";
 import "reflect-metadata";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {
-    FormsModule,
-    ReactiveFormsModule
-} from "@angular/forms";
-import {
     Component,
     ViewEncapsulation,
     enableProdMode,
@@ -23,11 +19,7 @@ import "twbs/bootstrap/dist/css/bootstrap.css!";
 import "./styles/style.css!";
 import {CharCount} from "./pipes/CharCount";
 import {appInjService} from "./services/AppInjService";
-import {
-    JsonpModule,
-    HttpModule,
-    Http
-} from "@angular/http";
+import {Http} from "@angular/http";
 import {CommBroker} from "../src/services/CommBroker";
 import {Filemenu} from "../src/comps/filemenu/Filemenu";
 import {FilemenuItem} from "../src/comps/filemenu/FilemenuItem";
@@ -164,9 +156,7 @@ import {SharedModule} from "./comps/app1/lazyone/SharedModule";
 import {DynaFactoryRes} from "./comps/app2/notes/DynaFactoryRes";
 import {DynaFactoryResHelloWorld} from "./comps/app2/notes/DynaFactoryResHelloWorld";
 import {PureDialog} from "./comps/puredialog/PureDialog";
-import {
-    PureDialogDirective
-} from "./comps/puredialog/PureDialogDirective";
+import {PureDialogDirective} from "./comps/puredialog/PureDialogDirective";
 import {
     LOGGING_ERROR_HANDLER_OPTIONS,
     LOGGING_ERROR_HANDLER_PROVIDERS
@@ -260,9 +250,7 @@ if (!Lib.DevMode())
 
 @NgModule({
     imports: [BrowserModule, SharedModule.forRoot(), routing],
-    providers: [
-        LogoutDeactivate,
-        ErrorLogService,
+    providers: [LogoutDeactivate, ErrorLogService,
 
         // CAUTION: This providers collection overrides the CORE ErrorHandler with our
         // custom version of the service that logs errors to the ErrorLogService.
