@@ -36,4 +36,7 @@ var providing = [{
     bootstrap: [AppComponent]
 })
 export class AppModule {
+    constructor(){
+        console.log('starting redux');
+    }
 }
