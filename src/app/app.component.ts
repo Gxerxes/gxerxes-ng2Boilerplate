@@ -71,6 +71,7 @@ export class AppComponent {
         console.log(event);
         console.log(this.appStore);
         console.log(_.random(1,10));
+        console.log(jQuery('body'));
         // bootbox.confirm("Are you sure?", function(result) {
         // });
     }
