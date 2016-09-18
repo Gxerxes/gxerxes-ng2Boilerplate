@@ -10,6 +10,7 @@ import {AppStore} from "angular2-redux-util";
 import {Lib} from "../Lib";
 import notify from "../appdb/NotifyReducer";
 import appdb from "../reducers/AppdbReducer";
+import {ttt} from "./ttt.component";
 // import parts from "../comps/app3/starwars/reducers/parts-reducer";
 // import cart from "../comps/app3/starwars/reducers/cart-reducer";
 // import films from "../comps/app3/starwars/reducers/films-reducer";
@@ -35,7 +36,7 @@ var providing = [{
 }];
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, ttt],
     imports: [BrowserModule, FormsModule, HttpModule, Ng2BootstrapModule],
     providers: [providing],
     bootstrap: [AppComponent]

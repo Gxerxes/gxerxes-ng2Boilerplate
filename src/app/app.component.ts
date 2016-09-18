@@ -8,7 +8,11 @@
  *
  **/
 
-import {Component} from '@angular/core';
+import {
+    Component,
+    ViewChild,
+    ViewContainerRef
+} from '@angular/core';
 import * as _ from 'lodash';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -27,7 +31,8 @@ import "rxjs/add/operator/mergeMap";
 import "rxjs/add/operator/merge";
 import "rxjs/add/operator/do";
 import * as platform from "platform";
-import * as bootbox from 'bootbox';
+// import * as bootbox from 'bootbox';
+import {ModalDirective} from "ng2-bootstrap";
 
 
 @Component({
@@ -37,13 +42,12 @@ import * as bootbox from 'bootbox';
 })
 export class AppComponent {
     title = 'app works...!';
-    constructor(private appStore: AppStore) {
+    constructor(private appStore: AppStore, private viewContainerRef:ViewContainerRef) {
         console.log(platform.name.toLowerCase())
         console.log(jQuery('body').height());
         console.log(_.random(10,20));
         console.log(this.appStore);
     }
-
 
     public ratingStates:any = [
         {stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
@@ -53,13 +57,22 @@ export class AppComponent {
         {stateOff: 'glyphicon-off'}
     ];
 
+    @ViewChild('childModal') public childModal:ModalDirective;
+
+    public showChildModal():void {
+        this.childModal.show();
+    }
+
+    public hideChildModal():void {
+        this.childModal.hide();
+    }
 
     private onClick(event){
         console.log(event);
         console.log(this.appStore);
         console.log(_.random(1,10));
-        bootbox.confirm("Are you sure?", function(result) {
-        });
+        // bootbox.confirm("Are you sure?", function(result) {
+        // });
     }
 
     public hoveringOver(value:number):void {
