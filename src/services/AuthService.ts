@@ -1,7 +1,7 @@
 import {Injectable, Injector} from '@angular/core';
 import {Router} from "@angular/router";
 import {appInjService} from "./AppInjService";
-import Map = Immutable.Map;
+import {Map} from 'immutable';
 import * as bootbox from 'bootbox';
 
 export enum FlagsAuth {

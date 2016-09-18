@@ -1,3 +1,5 @@
+///<reference path="../typings/app.d.ts"/>
+
 /**
  * License MIT
  * webpack cli
