@@ -88,10 +88,10 @@ declare var watch:any;
 
 declare var __moduleName: string;
 
-//declare global {
-//    devToolsExtension: any;
-//    devToolsExtensionDisabled: any;
-//    devToolsExtensionDisabled Array<T> {
-//}
+declare module bootbox {
+    // devToolsExtension: any;
+    // devToolsExtensionDisabled: any;
+    // devToolsExtensionDisabled Array<T> {
+}
 
 

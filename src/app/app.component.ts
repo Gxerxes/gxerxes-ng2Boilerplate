@@ -41,7 +41,6 @@ export class AppComponent {
         console.log(jQuery('body').height());
         console.log(_.random(10,20));
         console.log(this.appStore);
-        alert(8);
     }
 
 
