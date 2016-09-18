@@ -2,6 +2,7 @@
 
 ```
 npm install -g angular-cli@latest
+ng serve
 ```
 
 https://github.com/angular/angular-cli
