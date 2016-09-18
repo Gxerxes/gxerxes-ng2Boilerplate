@@ -1,7 +1,8 @@
 import {
     Component,
     ChangeDetectionStrategy,
-    ViewChild
+    ViewChild,
+    ElementRef
 } from "@angular/core";
 import {ModalDirective} from "ng2-bootstrap";
 
@@ -31,16 +32,26 @@ import {ModalDirective} from "ng2-bootstrap";
 
 export class ttt {
 
-    @ViewChild('smModal') public childModal:ModalDirective;
-
-    public showChildModal():void {
-        this.childModal.show();
-        setTimeout(()=>{
-              this.hideChildModal();
-        },3000)
+    constructor(private eleRef:ElementRef){
     }
 
-    public hideChildModal():void {
+    @ViewChild('smModal') public childModal: ModalDirective;
+
+    private someVal: string = 'foo';
+
+    public showChildModal(): void {
+        var self = this;
+        this.childModal.show();
+        setTimeout(() => {
+            console.log(self.someVal);
+            this.hideChildModal();
+        }, 1000)
+    }
+
+    public hideChildModal(): void {
+        console.log(1);
+        console.log(2);
+        this.eleRef;
         this.childModal.hide();
     }
 
