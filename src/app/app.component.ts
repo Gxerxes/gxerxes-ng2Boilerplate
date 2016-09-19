@@ -54,6 +54,8 @@ export class AppComponent {
         console.log(_.random(10, 20));
         console.log(this.appStore);
 
+
+
         var o = Observable.create((observer: Observer<any>) => {
             // this.errorObserver = observer;
             console.log(observer);

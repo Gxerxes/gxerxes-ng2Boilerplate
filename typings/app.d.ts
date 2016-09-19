@@ -25,8 +25,10 @@
 //<reference path="../typings/zone.js/zone.js.d.ts"/>
 
 declare var assert:any;
-// declare var module:any;
 declare var thunkMiddleware:any;
+declare var require: any;
+// declare var module:any;
+
 
 declare module Reflect {
     function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any;
